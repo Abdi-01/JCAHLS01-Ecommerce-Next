@@ -39,7 +39,7 @@ export default function Home(props) {
         <div className='row'>
           <div className='col-12 col-md-4 text-center'>
             <CardBody>
-              <img className='rounded-circle' src='https://miro.medium.com/max/598/0*8or0oFmHDRKnlETg' width="180px" />
+              {/* <img className='rounded-circle' src='https://miro.medium.com/max/598/0*8or0oFmHDRKnlETg' width="180px" /> */}
               <h3>Category 1</h3>
               <p>
                 Some representative placeholder content for the three columns of text below the carousel. This is the first column.
@@ -49,7 +49,7 @@ export default function Home(props) {
           </div>
           <div className='col-12 col-md-4 text-center'>
             <CardBody>
-              <img className='rounded-circle' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYDSSjj7hEq0mET7eL8cjwNWrXhSmW0dWHT2X8UBV-u8wDONeAMBnZ28JNQpSMy3UJu-s&usqp=CAU' width="180px" />
+              {/* <img className='rounded-circle' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYDSSjj7hEq0mET7eL8cjwNWrXhSmW0dWHT2X8UBV-u8wDONeAMBnZ28JNQpSMy3UJu-s&usqp=CAU' width="180px" /> */}
               <h3>Category 2</h3>
               <p>
                 Some representative placeholder content for the three columns of text below the carousel. This is the first column.
@@ -59,7 +59,7 @@ export default function Home(props) {
           </div>
           <div className='col-12 col-md-4 text-center'>
             <CardBody>
-              <img className='rounded-circle' src='https://miro.medium.com/max/598/0*8or0oFmHDRKnlETg' width="180px" />
+              {/* <img className='rounded-circle' src='https://miro.medium.com/max/598/0*8or0oFmHDRKnlETg' width="180px" /> */}
               <h3>Category 3</h3>
               <p>
                 Some representative placeholder content for the three columns of text below the carousel. This is the first column.

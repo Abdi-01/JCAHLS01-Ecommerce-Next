@@ -13,13 +13,15 @@ const NavbarComponent = (props) => {
                 {/* <img src={logo} width="100px" alt='logo-commerce' /> */}
                 <Link href="/">
                     {/* <h5>Commerce</h5> */}
-                    <Image
-                        src={require("../assets/logo.png")}
-                        alt="logo"
-                        width="100%"
-                        height="40%"
-                        objectFit='contain'
-                    />
+                    <div>
+                        <Image
+                            src={require("../assets/logo.png")}
+                            alt="logo"
+                            width="100%"
+                            height="40%"
+                            objectFit='contain'
+                        />
+                    </div>
                 </Link>
             </NavbarBrand>
             <NavbarToggler onClick={() => setOpenCollapse(!openCollapse)} />

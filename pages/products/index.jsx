@@ -26,32 +26,38 @@ const ProductsPage = (props) => {
     const printProducts = () => {
         return props.products.map((value, index) => {
             return <div key={value.id} className="col-12 col-md-6 col-lg-4 p-2">
-                <Card className='border-0 bg-transparent'>
-                    {/* Cara 1 mengakses gambar dari luar server/api/source lain */}
-                    {/* <Image
-                        loader={() => value.images[0]}
-                        src="img-link"
-                        alt="logo"
-                        width="100%"
-                        height="100%"
-                        objectFit='contain'
-                    /> */}
-                    {/* Cara 2 mengakses gambar dari luar server/api/source lain */}
-                    <Image
-                        src={value.images[0]}
-                        alt="logo"
-                        width="100%"
-                        height="100%"
-                        objectFit='contain'
-                    />
-                    <CardBody>
-                        <h6 className='fw-bold text-center my-0'>{value.nama}</h6>
-                        <p className='text-muted text-center my-0'>{value.kategori}</p>
-                        <h4 className='fw-bold text-center' style={{ color: "#9E887E" }}>
-                            IDR. {value.harga.toLocaleString()}
-                        </h4>
-                    </CardBody>
-                </Card>
+                <Link href={`/products/detail?id=${value.id}`}>
+                    <div>
+                        {/* Cara 1 mengakses gambar dari luar server/api/source lain */}
+                        <div className='text-center'>
+                            <Image
+                                loader={() => value.images[0]}
+                                src="img-link"
+                                alt="logo"
+                                width="100%"
+                                height="100%"
+                                objectFit='contain'
+                            />
+                        </div>
+                        {/* Cara 2 mengakses gambar dari luar server/api/source lain */}
+                        {/* <div>
+                        <Image
+                            src={value.images[0]}
+                            alt="logo"
+                            width="100%"
+                            height="100%"
+                            objectFit='contain'
+                        />
+                    </div> */}
+                        <div className='card-body'>
+                            <h6 className='fw-bold text-center my-0'>{value.nama}</h6>
+                            <p className='text-muted text-center my-0'>{value.kategori}</p>
+                            <h4 className='fw-bold text-center' style={{ color: "#9E887E" }}>
+                                IDR. {value.harga.toLocaleString()}
+                            </h4>
+                        </div>
+                    </div>
+                </Link>
             </div>
         })
     }
