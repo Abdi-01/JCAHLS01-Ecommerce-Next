@@ -31,7 +31,7 @@ const DetailProduct = ({ detail }) => {
         let { images } = detail
         return images.map((item, index) => {
             return (
-                <div className='col-3 col-md-12'>
+                <div className='col-3 col-md-12' key={index}>
                     {/* <img className="select-image mb-1 shadow bg-white rounded" src={item}
                         key={index}
                         width="100%"
@@ -146,7 +146,7 @@ const DetailProduct = ({ detail }) => {
                                 {
                                     detail.stock.map((item, index) => {
                                         return (
-                                            <div>
+                                            <div  key={index}>
                                                 <Button outline color="secondary" size="sm"
                                                     style={{ width: '100%', border: 'none', textAlign: 'left' }}
                                                     onClick={() => {
