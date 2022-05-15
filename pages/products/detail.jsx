@@ -32,13 +32,13 @@ const DetailProduct = ({ detail }) => {
         return images.map((item, index) => {
             return (
                 <div className='col-3 col-md-12'>
-                    <img className="select-image mb-1 shadow bg-white rounded" src={item}
+                    {/* <img className="select-image mb-1 shadow bg-white rounded" src={item}
                         key={index}
                         width="100%"
                         alt=''
                         onClick={() => setThumbnail(index)}
                         style={{ borderBottom: thumbnail == index && "3px solid #407AB1" }}
-                    />
+                    /> */}
                 </div>
             )
         })
@@ -123,7 +123,7 @@ const DetailProduct = ({ detail }) => {
                 <>
                     <div className="row col-md-8 text-center">
                         <div className="col-12 order-md-2 col-md-10">
-                            <img className="shadow-sm bg-white rounded" alt='' src={detail.images[thumbnail]} width="100%" />
+                            {/* <img className="shadow-sm bg-white rounded" alt='' src={detail.images[thumbnail]} width="100%" /> */}
                         </div>
                         <div className="col-12 order-md-1 col-md-2">
                             <div className='row my-2 my-md-0'>
