@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
         let res = await axios.get("http://localhost:5000/products")
         return {
             props: {
-                products: res.data
+                products: res.data?res.data:[]
             },
             revalidate: 10
         }
