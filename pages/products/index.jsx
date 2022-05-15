@@ -27,34 +27,18 @@ const ProductsPage = (props) => {
         return props.products.map((value, index) => {
             return <div key={value.id} className="col-12 col-md-6 col-lg-4 p-2">
                 <Link href={`/products/detail?id=${value.id}`}>
-                    <div>
-                        {/* Cara 1 mengakses gambar dari luar server/api/source lain */}
-                        <div className='text-center'>
-                            <Image
-                                loader={() => value.images[0]}
-                                src="img-link"
-                                alt="logo"
-                                width="100%"
-                                height="100%"
-                                objectFit='contain'
-                            />
-                        </div>
-                        {/* Cara 2 mengakses gambar dari luar server/api/source lain */}
-                        {/* <div>
+                    <div className='text-center'>
                         <Image
                             src={value.images[0]}
                             alt="logo"
-                            width="100%"
-                            height="100%"
+                            width="170%"
+                            height="150%"
                             objectFit='contain'
                         />
-                    </div> */}
                         <div className='card-body'>
                             <h6 className='fw-bold text-center my-0'>{value.nama}</h6>
                             <p className='text-muted text-center my-0'>{value.kategori}</p>
-                            <h4 className='fw-bold text-center' style={{ color: "#9E887E" }}>
-                                IDR. {value.harga.toLocaleString()}
-                            </h4>
+                            <h4 className='fw-bold text-center'>IDR. {value.harga.toLocaleString("id")}</h4>
                         </div>
                     </div>
                 </Link>
@@ -80,7 +64,6 @@ const ProductsPage = (props) => {
                 </div>
             </div>
         </div>
-        <h1>Products Page</h1>
     </div>
 }
 
