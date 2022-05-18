@@ -9,7 +9,7 @@ import Image from 'next/image';
 // dijalankan ketika pertama kali project kita build
 export const getStaticProps = async () => {
     try {
-        let res = await axios.get("http://localhost:5000/products")
+        let res = await axios.get("https://jserver-ecommerce19.herokuapp.com/products")
         return {
             props: {
                 products: res.data ? res.data : []
