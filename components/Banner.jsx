@@ -4,10 +4,10 @@ const Banner = ({bannerList}) => {
 
     return (
         <div className='container'>
-            <UncontrolledCarousel
+            {/* <UncontrolledCarousel
                 className='shadow-sm'
                 items={bannerList}
-            />
+            /> */}
         </div>
     )
 }
