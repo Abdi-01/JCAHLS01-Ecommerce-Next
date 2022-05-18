@@ -7,19 +7,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // dijalankan ketika pertama kali project kita build
-// export const getStaticProps = async () => {
-//     try {
-//         let res = await axios.get("http://localhost:5000/products")
-//         return {
-//             props: {
-//                 products: res.data?res.data:[]
-//             },
-//             revalidate: 10
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export const getStaticProps = async () => {
+    try {
+        let res = await axios.get("http://localhost:5000/products")
+        return {
+            props: {
+                products: res.data ? res.data : []
+            },
+            revalidate: 10
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 const ProductsPage = (props) => {
 
